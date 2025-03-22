@@ -5,7 +5,7 @@
 </p>
 
 ## Disclaimer
-This template is unofficial, i.e., nor EETAC nor UPC have contributed to its development. This template is a recreation of the official template available [here](https://eetac.upc.edu/ca/els-estudis/TFE/maqueta-del-tfe), only available in Microsoft Work file format. All credit goes to the author(s) of the original template.
+This template is unofficial, i.e., neither EETAC nor UPC have contributed to its development. This template is a recreation of the official template available [here](https://eetac.upc.edu/ca/els-estudis/TFE/maqueta-del-tfe), only available in Microsoft Word format. All credit goes to the author(s) of the original template.
 
 ---
 
@@ -18,7 +18,7 @@ This template is unofficial, i.e., nor EETAC nor UPC have contributed to its dev
 
 
 ## Avís
-Aquesta plantilla no és oficial, és a dir, ni l'ETAC ni la UPC han contribuït al seu desenvolupament. Aquesta plantilla és només una recreació de la plantilla oficial que es pot trobar  [aquí](https://eetac.upc.edu/ca/els-estudis/TFE/maqueta-del-tfe), únicament disponible en format Microsoft Word. Es reconeixen els drets de l'autor o els autors de la plantilla original.
+Aquesta plantilla no és oficial, és a dir, ni l'EETAC ni la UPC han contribuït al seu desenvolupament. Aquesta plantilla és només una recreació de la plantilla oficial que es pot trobar  [aquí](https://eetac.upc.edu/ca/els-estudis/TFE/maqueta-del-tfe), únicament disponible en format Microsoft Word. Es reconeixen els drets de l'autor o els autors de la plantilla original.
 
 ---
 
