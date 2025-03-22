@@ -1,0 +1,35 @@
+\usepackage[nopostdot,acronym,nogroupskip,nonumberlist]{glossaries}
+\makeglossaries 
+
+\newcolumntype{P}[1]{>{\arraybackslash}p{#1}}
+\renewcommand*{\entryname}{Symbol}
+\newglossarystyle{eetac}{% 
+\setglossarystyle{long}%
+\renewenvironment{theglossary}%
+{\begingroup%
+\renewcommand\arraystretch{0.969}%
+\begin{longtable}{@{}P{2.5cm}@{}p{\dimexpr\linewidth-2.5cm}@{}}}%
+{\end{longtable}\endgroup}%
+}
+
+\renewcommand{\glossarysection}[2][]{%
+    \vspace*{-1.1cm}%
+    \section*{\Large #2}%
+    \vspace*{0.82cm}% 
+}
+
+%%%
+%%%
+%%% Define acronyms below this line
+
+
+\newacronym{atm}{ATM}{Air Traffic Management}
+\newacronym{iss}{ISS}{International Space Station}
+\newacronym{nfv}{NFV}{Network Functions Virtualization}
+\newacronym{rf}{RF}{Radiofrequency}
+\newacronym{sdn}{SDN}{Software-defined Networking}
+\newacronym{theta}{\(\theta\)}{Thickness}
+\newacronym{lambda}{\(\lambda\)}{Wavelength}
+\newacronym{ecc}{\(e\)}{Eccentricity}
+
+

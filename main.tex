@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EETAC-UPC TFG/TFM Template
+% Javi C.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[twoside,a4paper,openright,10pt]{report}
+
+% Change this accordingly, used for PDF metadata and headings
+\newcommand{\thesisTitle}{Title of thesis}
+\newcommand{\thesisType}{Master's thesis} % or Bachelor's
+\newcommand{\thesisAuthor}{AuthorFirst AuthorLast}
+\newcommand{\thesisTutor}{Tutor1First Tutor1Last, Tutor2First Tutor2Last}
+\newcommand{\thesisKeywords}{Keyword1, Keyword2, Keyword3}
+
+% Modify default hyphenations, separate syllables by a hyphen, and words with spaces.
+\hyphenation{CubeSat op-tical net-works semi-conduc-tor EETAC UPC}
+
+% The required package and style definitions for the template to function.
+\input{prologue/preamble}
+
+% Comment out or delete the line below if you aren't including a dedication or an acknowledgments section
+\input{prologue/glossary}
+
+%=====================================
+\begin{document}
+
+% Comment out or delete the line below if you aren't including a dedication or an acknowledgments section
+\input{prologue/acknowledgments}
+
+% Index
+\clearpage
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+
+% Glossary
+%% Comment out or delete the lines below if you aren't including a glossary
+\glsaddall
+\printglossary[type=acronym,style=eetac,title=Glossary]
+\thispagestyle{empty}
+
+% Reset page count
+\setcounter{page}{1}
+
+% Beginning proper
+\include{chapters/introduction}
+\include{chapters/considerations}
+
+
+% Bibliography
+\printbibliography[title=References,heading=bibliography]
+\addcontentsline{toc}{chapter}{References}
+
+\begin{appendices}
+    \renewcommand\appendixname{Annex}
+    
+    \include{chapters/appendix1}
+
+    \cleardoublepage
+    \include{chapters/seia}
+\end{appendices}
+
+\end{document}

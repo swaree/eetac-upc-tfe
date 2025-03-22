@@ -1,0 +1,223 @@
+% Language settings
+\usepackage[english]{babel}  
+
+% Font and encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Useful packages
+\usepackage{etoolbox}
+\usepackage{emptypage}
+
+\usepackage{amsmath}
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\renewcommand{\theequation}{{\sffamily\small\thechapter.\arabic{equation}}}
+\DeclareMathSizes{12pt}{12pt}{12pt}{12pt} 
+
+\usepackage{siunitx}
+\sisetup{detect-all}
+
+\usepackage[thinc]{esdiff}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xurl}
+\usepackage{xcolor}
+
+\definecolor{upc}{HTML}{017cc0}
+\usepackage[allcolors=blue]{hyperref}
+\hypersetup{%
+    pdfborder = {0 0 0},
+    unicode = true,
+    bookmarksnumbered = true,
+    pdfstartview = {FitH},
+    pdfpagemode = UseOutlines,
+    pdftitle = {\thesisTitle},
+    pdfauthor = {\thesisAuthor, \thesisTutor},
+    pdfsubject = {\thesisType - \thesisTitle},
+    pdfkeywords = {\thesisKeywords},
+    pdfinfo={%
+        Title={\thesisTitle},
+        Author={\thesisAuthor}
+    },
+    colorlinks = true,
+    linkcolor = upc,
+    citecolor = upc,
+    filecolor = upc,
+    urlcolor = upc,
+}
+
+
+\usepackage[english,noabbrev,capitalize]{cleveref}
+\usepackage{float}
+\usepackage{outlines}
+
+\usepackage{enumitem}
+\setlist[itemize,1]{partopsep=1.1pt,parsep=0.2pt,labelsep=0.48cm,left=0.62cm,labelwidth=0.3cm,label=\(\bullet\)}
+
+\usepackage[width=0.95\textwidth,font={sf,small},justification=centering,skip=0.4cm,belowskip=-0.5cm]{caption}
+\setlength\abovecaptionskip{6pt plus 2pt minus 1pt}
+\setlength\belowcaptionskip{12pt plus 2pt minus 1pt}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+% \newcommand{\BackgroundPic}[1]{
+%     \put(0,0){
+%     \parbox[b][\paperheight]{\paperwidth}{%
+%     \vfill
+%     \centering
+%     {\transparent{0.4}\includegraphics[width=\paperwidth,height=\paperheight,page={#1}]{maquetatfg.pdf}}
+%     \vfill
+% }}}
+
+\usepackage[subfigure]{tocloft}
+\tocloftpagestyle{empty}
+\renewcommand{\cfttoctitlefont}{\normalfont\fontsize{14}{16}\bfseries}
+\renewcommand{\cftbeforetoctitleskip}{-10pt}
+%\renewcommand{\cftaftertoctitleskip}{1.5cm}
+\makeatletter
+\patchcmd{\l@chapter}{#1}{\MakeUppercase{#1}}{}{}
+\makeatother
+%\newlength{\cftafterchapskip}
+\setlength{\cftbeforechapskip}{0.4cm}
+\setlength{\cftbeforesecskip}{0.205cm}
+\setlength{\cftsecnumwidth}{0.71cm}
+\renewcommand{\cftsecfont}{\bfseries}
+\setlength{\cftbeforesubsecskip}{0.09cm}
+\setlength{\cftsubsecindent}{0.95cm}
+\setlength{\cftsubsecnumwidth}{1.05cm}
+\renewcommand{\cftdotsep}{0.1}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+%\addto\captionsenglish{\renewcommand{\bibname}{Bibliography}}
+
+\renewcommand{\cftloftitlefont}{\normalfont\fontsize{14}{16}\bfseries}
+\renewcommand{\cftbeforeloftitleskip}{-10pt}
+\renewcommand{\cftafterloftitleskip}{0.95cm}
+\setlength{\cftbeforefigskip}{0.2cm}
+\setlength{\cftfigindent}{0cm}
+\renewcommand{\cftfigpresnum}{Figure }
+\renewcommand{\cftfigaftersnum}{: }
+\setlength{\cftfignumwidth}{1.8cm}
+
+\renewcommand{\cftlottitlefont}{\normalfont\fontsize{14}{16}\bfseries}
+\renewcommand{\cftbeforelottitleskip}{-10pt}
+\renewcommand{\cftafterlottitleskip}{0.95cm}
+\setlength{\cftbeforetabskip}{0.2cm}
+\setlength{\cfttabindent}{0cm}
+\renewcommand{\cfttabpresnum}{Table }
+\renewcommand{\cfttabaftersnum}{: }
+\setlength{\cfttabnumwidth}{1.65cm}
+
+\usepackage[skip=5pt plus 0pt]{parskip}
+\usepackage[shortcuts]{extdash}
+
+\raggedbottom
+
+\usepackage{fancyvrb}
+
+% Page layout
+\usepackage[a4paper,left=3.1cm,right=2.9cm,top=0cm,bottom=2.5cm,asymmetric]{geometry}
+%% Margins
+\flushbottom
+\setlength{\topmargin}{-2.5cm}
+\setlength{\voffset}{0cm}
+\setlength{\headheight}{1.55cm}
+\setlength{\headsep}{0.915cm}
+\setlength{\textheight}{24.7cm}
+\usepackage{layout}
+\usepackage{eso-pic}
+\usepackage{transparent}
+
+%% Line height
+\usepackage{setspace}
+\setstretch{1.14}
+
+%% Header
+\usepackage{fancyhdr}
+\makeatletter
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}}
+\makeatother
+\fancyhf{}
+\pagestyle{fancy}
+\fancyhead[LO]{\fontsize{9}{9} \selectfont \nouppercase{\leftmark}}
+\fancyhead[RE]{\fontsize{9}{9} \selectfont \nouppercase{\thesisTitle}}
+\fancyhead[RO,LE]{\fontsize{9}{9} \selectfont \thepage}
+\makeatletter
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+\makeatother
+
+%% Headings
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\chapter}[hang]
+    {\normalfont\fontsize{14}{16}\bfseries}
+    {\thechapter}
+    {0.47cm}{\centering}
+\titlespacing*{\chapter}{0pt}{-8pt}{20pt}
+
+\titleformat{\section}[hang]
+    {\normalfont\fontsize{12}{14}\bfseries}
+    {\thesection\ }
+    {0.31cm}{}
+\titlespacing*{\section}{0pt}{18.3pt}{1.5pt}
+
+\titleformat{\subsection}[hang]
+    {\normalfont\fontsize{11}{13}\bfseries}
+    {\thesubsection\ }
+    {0.3cm}{}
+\titlespacing*{\subsection}{0cm}{11.6pt}{1pt}
+
+\titleformat{\subsubsection}[hang]
+    {\normalfont\itshape}
+    {\thesubsubsection\ }
+    {0.3cm}{}
+\titlespacing*{\subsubsection}{0cm}{6pt}{0.5pt}
+
+\fancyfoot{}
+
+\pdfminorversion=7
+\pdfinclusioncopyfonts=1
+\pdfgentounicode=1
+
+\usepackage[newfloat]{minted}
+
+\usemintedstyle{default}
+
+\setminted{
+    fontsize=\small,
+    fontfamily=fvm,
+    baselinestretch=1.15,
+    frame=lines,
+    framesep=3mm,
+    breaklines=true,
+    linenos
+}
+
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{name=Listing}
+
+% Style line numbers
+\renewcommand{\theFancyVerbLine}{
+\ttfamily
+\textcolor[rgb]{0.4,0.4,0.4}{
+\footnotesize{
+\arabic{FancyVerbLine}}}}
+
+\usepackage{algpseudocode}
+\usepackage[chapter,boxed]{algorithm}
+
+\usepackage{csquotes}
+\usepackage[backend=biber,style=ieee,maxcitenames=2, minnames=1,maxbibnames=6]{biblatex}
+\addbibresource{references.bib}
+\defbibheading{bibliography}[\bibname]{\chapter*{#1}\markboth{#1}{}}
+
+\usepackage[titletoc]{appendix}
+\usepackage{bm}
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+
+\usepackage{pdflscape}
+\usepackage{tabularx}
